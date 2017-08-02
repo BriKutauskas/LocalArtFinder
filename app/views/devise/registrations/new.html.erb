@@ -1,5 +1,6 @@
 <h2>Sign up</h2>
 
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -21,6 +22,35 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, id: :customer_first_name %>
+  </div>
+
+  <div class="field">
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, id: :customer_last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :street %>
+    <%= f.text_field :street, id: :customer_street %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city, id: :customer_city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.text_field :state, id: :customer_state %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zipcode %>
+    <%= f.text_field :zipcode, id: :customer_zipcode %>
+  </div>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

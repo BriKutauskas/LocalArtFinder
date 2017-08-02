@@ -12,6 +12,24 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
     <%= form.label :first_name %>
     <%= form.text_field :first_name, id: :customer_first_name %>
   </div>
@@ -23,7 +41,7 @@
 
   <div class="field">
     <%= form.label :email %>
-    <%= form.text_field :email, id: :customer_email %>
+    <%= form.email_field :email, id: :customer_email %>
   </div>
 
   <div class="field">

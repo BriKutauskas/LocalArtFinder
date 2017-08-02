@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   resources :customers
   resources :artists
 
-  devise_for :users
+
+  devise_for :users, :customers, :artists
 
   devise_scope :user do
     authenticated :user do
